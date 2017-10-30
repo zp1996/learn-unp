@@ -1,0 +1,7 @@
+config.log
+config.status
+config.h
+Makefile
+Make.defines
+.DS_Store
+*.o
