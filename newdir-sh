@@ -1,0 +1,31 @@
+#! /bin/sh
+# create new directory
+
+name=$1
+
+# filename default is "<demo>"
+if $2; then
+	file="<demo>"
+else
+	file=$2
+fi
+
+mkdir ${name}
+cd "$name/"
+
+# create Makefile
+echo "include ../Make.defines
+
+PROGS =	${file}
+
+all: \${PROGS}
+	for prog in \${PROGS}; \\
+	do \\
+		make \"\$\$prog\"; \\
+	done
+
+${file}: ${file}.o
+		\${CC} \${CFLAGS} -o \$@ ${file}.o \${LIBS}
+
+clean:
+		rm -f \${PROGS} \${CLEANFILES}" > Makefile

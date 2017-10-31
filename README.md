@@ -1,8 +1,8 @@
 ## learn-unp
 
-编译过程：
+Compile：
 
-```
+```shell
 ./configure    # try to figure out all implementation differences
 
 cd lib         # build the basic library that all programs need
@@ -14,7 +14,21 @@ make
 cd ../libroute # only if your system supports 4.4BSD style routing sockets
 make           # only if your system supports 4.4BSD style routing sockets
 
-# 非必要情况下
+# not necessary
 cd ../libxti   # only if your system supports XTI
 make           # only if your system supports XTI
 ```
+
+create new directory：
+```shell
+# at this directory root, filename is not necessary
+./newdir <your directory name> <filename>
+```
+
+Those directories is necessary：
+```
+/lib
+/libfree
+/libroute
+```
+**you can remove another directories**
