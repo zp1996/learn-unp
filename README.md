@@ -22,7 +22,7 @@ make           # only if your system supports XTI
 create new directory：
 ```shell
 # at this directory root, filename is not necessary
-./newdir <your directory name> <filename>
+./newdir-sh <your directory name> <filename>
 ```
 
 Those directories is necessary：
