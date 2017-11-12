@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <unp.h>
 
+/**
+ * 客户端请求某ip地址的日期服务接口
+ */
 int main(int argc, char **argv) {
   int sockfd, n;
   char recvline[MAXLINE + 1];
