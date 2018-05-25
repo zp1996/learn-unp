@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
 
   bzero(&servaddr, sizeof(servaddr));
   servaddr.sin_family = AF_INET;
-  // INADDR_ANY为0.0.0.0, htonl将ip地址进行端序转换
+  // INADDR_ANY为0.0.0.0, htonl将ip地址进行端序转换,在头文件netinet/in.h中定义
   servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
   servaddr.sin_port = htons(13);
   // 将本地地址与日期协议套接口捆绑
