@@ -1,4 +1,3 @@
-#include "stdio.h"
 #include "unp.h"
 
 int ipv4_inet_pton(int family, const char *strptr, void *addrptr) {
